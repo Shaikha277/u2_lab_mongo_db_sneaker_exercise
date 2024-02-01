@@ -74,34 +74,34 @@ Use the MongoDB lesson to solve for the following:
 1. Find all the Air Jordans that have the model number: **4363**.
 
 ```sh
-<--- db.products.find({model:'4363'}) !--->
+ db.products.find({model:'4363'})
 ```
 
 2. Find all shoes that are either **red** or **black**.
 
 ```sh
-<--- db.products.find({ $or:[{ color: "Black" }, {color:"Red"}]})
- !--->
+ db.products.find({ $or:[{ color: "Black" }, {color:"Red"}]})
+
 ```
 
 3. Insert **4 new** [Air Jordans](https://www.jordan.com/collection/) into our collection (you can just make up model #s and colors if you like):
 
 ```sh
-<--- db.products.insertMany([{model:'2202',brand:'Nike',color:'blue'},{model:'5566',brand:'Nike',color:'yellow'},{model:'7777',brand:'Nike',color:'pink'}])
- !--->
+db.products.insertMany([{model:'2202',brand:'Nike',color:'blue'},{model:'5566',brand:'Nike',color:'yellow'},{model:'7777',brand:'Nike',color:'pink'}])
+
 
 ```
 
 4. Update all **red** Jordans to **Maroon**:
 
 ```sh
-<--- db.products.updateMany({color:'Red'},{$set:{color:'Maroon'}}) !--->
+db.products.updateMany({color:'Red'},{$set:{color:'Maroon'}})
 ```
 
 5. Delete all model **4281** Air Jordans.
 
 ```sh
-<--- db.products.deleteMany({model:'4281'}) !--->
+db.products.deleteMany({model:'4281'})
 ```
 
 ## Bonus
